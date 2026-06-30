@@ -129,33 +129,50 @@ initNfcMode();
     });
 })();
 
-// EmailJS integration for contact form (only on pages that have it)
-if (typeof emailjs !== "undefined") {
-    (function () {
-        emailjs.init("2HcyjXrWoH_pkVI8W"); // Replace with your public key
-    })();
+// Resend integration for contact form
+const contactForm = document.getElementById("contactForm");
+if (contactForm) {
+    contactForm.addEventListener("submit", async function (e) {
+        e.preventDefault();
 
-    const contactForm = document.getElementById("contactForm");
-    if (contactForm) {
-        contactForm.addEventListener("submit", function (e) {
-            e.preventDefault();
+        const fromName = document.getElementById("contactName").value;
+        const fromEmail = document.getElementById("contactEmail").value;
+        const message = document.getElementById("contactMessage").value;
+        const responseEl = document.getElementById("formResponse");
 
-            emailjs.sendForm("service_yq4fpnq", "template_vhy0wju", this)
-                .then(() => {
-                    const responseEl = document.getElementById("formResponse");
-                    if (responseEl) {
-                        responseEl.innerText = "Message sent!";
-                    }
-                    this.reset();
-                }, (err) => {
-                    const responseEl = document.getElementById("formResponse");
-                    if (responseEl) {
-                        responseEl.innerText = "Error sending.";
-                    }
-                    console.error("EmailJS error:", err);
-                });
-        });
-    }
+        try {
+            const response = await fetch("/api/send-email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    from_name: fromName,
+                    from_email: fromEmail,
+                    message: message,
+                }),
+            });
+
+            if (response.ok) {
+                if (responseEl) {
+                    responseEl.innerText = "Message sent!";
+                    responseEl.style.color = "#4ade80";
+                }
+                this.reset();
+            } else {
+                if (responseEl) {
+                    responseEl.innerText = "Failed to send message. Please try again.";
+                    responseEl.style.color = "#ef4444";
+                }
+            }
+        } catch (error) {
+            console.error("Error sending message:", error);
+            if (responseEl) {
+                responseEl.innerText = "Error sending message. Please try again.";
+                responseEl.style.color = "#ef4444";
+            }
+        }
+    });
 }
 
 // Matrix digital rain effect (only if canvas exists)

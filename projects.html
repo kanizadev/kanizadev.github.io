@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#050806" />
+    <meta name="description" content="Projects by Kaniza — Flutter apps, web experiments, and polished UI builds." />
+    <title>Projects – Kaniza</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Orbitron:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <canvas id="matrix"></canvas>
+    <div class="cursor-dot"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header>
+        <nav>
+            <h1>kanizadev</h1>
+            <button type="button" class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">&#9776;</button>
+            <ul id="navLinks">
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="projects.html" class="active">projects</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section id="projects">
+            <h2>projects</h2>
+            <div class="project-list">
+            <div class="project">
+                <h3>Sage Green Calculator</h3>
+                <p>🌿 A focused Flutter calculator app with a calm sage green palette and glassmorphism UI, crafted for distraction‑free everyday use.</p>
+                <ul class="project-meta">
+                    <li><strong>Tech</strong>: Flutter, Dart</li>
+                    <li><strong>Highlights</strong>: Glassmorphism cards, subtle haptics & animations, responsive layout for phones and tablets</li>
+                    <li><strong>Role</strong>: Solo designer & developer</li>
+                </ul>
+                <div class="project-actions">
+                    <a class="btn-chip demo" href="project.html?slug=sage-green-calculator">details ↗</a>
+                    <a class="btn-chip code" href="https://github.com/kanizadev/p001" target="_blank" rel="noopener noreferrer">view code ↗</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Cube Clock – 3D Flip Clock</h3>
+                <p>🧊 A 3D flip-style digital clock built with HTML, CSS, and JavaScript, featuring smooth cube transitions and a clean, futuristic desk‑clock feel.</p>
+                <ul class="project-meta">
+                    <li><strong>Tech</strong>: HTML, CSS, JavaScript</li>
+                    <li><strong>Highlights</strong>: CSS 3D transforms, smooth flip animations, responsive layout</li>
+                    <li><strong>Use case</strong>: Ambient time display for landing pages and dashboards</li>
+                </ul>
+                <div class="project-actions">
+                    <a class="btn-chip demo" href="project.html?slug=cube-clock-3d-flip-clock">details ↗</a>
+                    <a class="btn-chip demo" href="https://kanizadev.github.io/p-1/" target="_blank" rel="noopener noreferrer">live demo ↗</a>
+                    <a class="btn-chip code" href="https://github.com/kanizadev/p-1" target="_blank" rel="noopener noreferrer">view code ↗</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Gradient Palette Generator</h3>
+                <p>🎨 A gradient palette generator that helps you explore, tweak, and save modern color combinations directly in the browser.</p>
+                <ul class="project-meta">
+                    <li><strong>Tech</strong>: HTML, CSS, JavaScript</li>
+                    <li><strong>Highlights</strong>: Random and custom gradients, copy‑to‑clipboard, saved favorites</li>
+                    <li><strong>Use case</strong>: Fast visual exploration for UI and branding ideas</li>
+                </ul>
+                <div class="project-actions">
+                    <a class="btn-chip demo" href="project.html?slug=gradient-palette-generator">details ↗</a>
+                    <a class="btn-chip demo" href="https://kanizadev.github.io/p-2/" target="_blank" rel="noopener noreferrer">live demo ↗</a>
+                    <a class="btn-chip code" href="https://github.com/kanizadev/p-2" target="_blank" rel="noopener noreferrer">view code ↗</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Advanced Tic Tac Toe Game</h3>
+                <p>🎮 A modern Flutter take on Tic Tac Toe with multiple board sizes, AI opponents, and timed challenges for more replayability.</p>
+                <ul class="project-meta">
+                    <li><strong>Tech</strong>: Flutter, Dart</li>
+                    <li><strong>Highlights</strong>: AI difficulty levels, 3×3 and larger boards, match history, animations</li>
+                    <li><strong>Focus</strong>: Game architecture, state management, and polished UX</li>
+                </ul>
+                <div class="project-actions">
+                    <a class="btn-chip demo" href="project.html?slug=advanced-tic-tac-toe-game">details ↗</a>
+                    <a class="btn-chip code" href="https://github.com/kanizadev/p002" target="_blank" rel="noopener noreferrer">view code ↗</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Weather App</h3>
+                <p>🌤️ A beautiful, modern weather app that surfaces real‑time conditions and forecasts with a soft, friendly Flutter UI.</p>
+                <ul class="project-meta">
+                    <li><strong>Tech</strong>: Flutter, Dart, REST APIs</li>
+                    <li><strong>Highlights</strong>: Current weather, multi‑day forecast, icon‑driven UI, responsive cards</li>
+                    <li><strong>Focus</strong>: API integration, error handling, and clean information hierarchy</li>
+                </ul>
+                <div class="project-actions">
+                    <a class="btn-chip demo" href="project.html?slug=weather-app">details ↗</a>
+                    <a class="btn-chip code" href="https://github.com/kanizadev/p003" target="_blank" rel="noopener noreferrer">view code ↗</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Advanced BMI Calculator</h3>
+                <p>🌿 A modern Flutter BMI and body‑composition calculator with a calm glassmorphism design and sage green color system.</p>
+                <ul class="project-meta">
+                    <li><strong>Tech</strong>: Flutter, Dart</li>
+                    <li><strong>Highlights</strong>: BMI and category feedback, input validation, responsive layout</li>
+                    <li><strong>Focus</strong>: UX for data input and clear, human‑readable health feedback</li>
+                </ul>
+                <div class="project-actions">
+                    <a class="btn-chip demo" href="project.html?slug=advanced-bmi-calculator">details ↗</a>
+                    <a class="btn-chip code" href="https://github.com/kanizadev/p004" target="_blank" rel="noopener noreferrer">view code ↗</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Kaniza's Personal Portfolio</h3>
+                <p>🎨 A responsive portfolio built with Flutter to showcase skills, projects, and a simple contact flow for clients and recruiters.</p>
+                <ul class="project-meta">
+                    <li><strong>Tech</strong>: Flutter, Dart</li>
+                    <li><strong>Highlights</strong>: Multi‑section layout, reusable UI components, responsive design</li>
+                    <li><strong>Focus</strong>: Personal branding and clean presentation of work</li>
+                </ul>
+                <div class="project-actions">
+                    <a class="btn-chip demo" href="project.html?slug=kaniza-personal-portfolio">details ↗</a>
+                    <a class="btn-chip code" href="https://github.com/kanizadev/p005" target="_blank" rel="noopener noreferrer">view code ↗</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Quiz App</h3>
+                <p>🎯 A playful Flutter quiz app with multiple‑choice questions, scoring, and a clear results screen.</p>
+                <ul class="project-meta">
+                    <li><strong>Tech</strong>: Flutter, Dart</li>
+                    <li><strong>Highlights</strong>: Question navigation, score tracking, simple state management</li>
+                    <li><strong>Use case</strong>: Lightweight learning and trivia experiences</li>
+                </ul>
+                <div class="project-actions">
+                    <a class="btn-chip demo" href="project.html?slug=quiz-app">details ↗</a>
+                    <a class="btn-chip code" href="https://github.com/kanizadev/p006" target="_blank" rel="noopener noreferrer">view code ↗</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Multi-Step Registration Form</h3>
+                <p>📋 A feature‑rich multi‑step Flutter form that guides users through a smooth, low‑stress sign‑up journey.</p>
+                <ul class="project-meta">
+                    <li><strong>Tech</strong>: Flutter, Dart</li>
+                    <li><strong>Highlights</strong>: Stepper flow, validation per step, progress indication, sage green theme</li>
+                    <li><strong>Focus</strong>: Form UX, error states, and micro‑interactions</li>
+                </ul>
+                <div class="project-actions">
+                    <a class="btn-chip demo" href="project.html?slug=multi-step-registration-form">details ↗</a>
+                    <a class="btn-chip code" href="https://github.com/kanizadev/p007" target="_blank" rel="noopener noreferrer">view code ↗</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Flutter Examples App</h3>
+                <p>📱 A comprehensive Flutter playground with 38+ interactive examples from basic widgets to more advanced patterns.</p>
+                <ul class="project-meta">
+                    <li><strong>Tech</strong>: Flutter, Dart</li>
+                    <li><strong>Highlights</strong>: Categorised demos, live previews, clean code organization</li>
+                    <li><strong>Use case</strong>: Learning companion and reference for Flutter newcomers</li>
+                </ul>
+                <div class="project-actions">
+                    <a class="btn-chip demo" href="project.html?slug=flutter-examples-app">details ↗</a>
+                    <a class="btn-chip code" href="https://github.com/kanizadev/p008" target="_blank" rel="noopener noreferrer">view code ↗</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Snake Game</h3>
+                <p>🐍 A classic Snake game re‑imagined in Flutter with smooth controls and a minimal, modern grid UI.</p>
+                <ul class="project-meta">
+                    <li><strong>Tech</strong>: Flutter, Dart</li>
+                    <li><strong>Highlights</strong>: Real‑time game loop, collision detection, increasing difficulty</li>
+                    <li><strong>Focus</strong>: Game mechanics and responsive canvas layout</li>
+                </ul>
+                <div class="project-actions">
+                    <a class="btn-chip demo" href="project.html?slug=snake-game">details ↗</a>
+                    <a class="btn-chip code" href="https://github.com/kanizadev/p009" target="_blank" rel="noopener noreferrer">view code ↗</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Flutter Audio Player</h3>
+                <p>🎵 A tiny, polished multi‑platform music player that keeps the UI calm while the audio engine does the hard work underneath.</p>
+                <ul class="project-meta">
+                    <li><strong>Tech</strong>: Flutter, Dart</li>
+                    <li><strong>Highlights</strong>: Play / pause controls, track progress, minimal player chrome</li>
+                    <li><strong>Focus</strong>: Audio APIs and cross‑platform behavior</li>
+                </ul>
+                <div class="project-actions">
+                    <a class="btn-chip demo" href="project.html?slug=flutter-audio-player">details ↗</a>
+                    <a class="btn-chip code" href="https://github.com/kanizadev/p010" target="_blank" rel="noopener noreferrer">view code ↗</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Language Translator App</h3>
+                <p>🌐 A neat Flutter language translator that keeps the interface simple while supporting multiple languages.</p>
+                <ul class="project-meta">
+                    <li><strong>Tech</strong>: Flutter, Dart, translation APIs</li>
+                    <li><strong>Highlights</strong>: Text translation, clear input/output areas, minimal UI</li>
+                    <li><strong>Focus</strong>: Working with external APIs and async UX states</li>
+                </ul>
+                <div class="project-actions">
+                    <a class="btn-chip demo" href="project.html?slug=language-translator-app">details ↗</a>
+                    <a class="btn-chip code" href="https://github.com/kanizadev/p011" target="_blank" rel="noopener noreferrer">view code ↗</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Advanced Todo List App</h3>
+                <p>🎯 A glassmorphism Todo app in sage green that turns daily task management into a calmer experience.</p>
+                <ul class="project-meta">
+                    <li><strong>Tech</strong>: Flutter, Dart</li>
+                    <li><strong>Highlights</strong>: Task creation and completion, sections, animated cards</li>
+                    <li><strong>Focus</strong>: List management UX and visual hierarchy</li>
+                </ul>
+                <div class="project-actions">
+                    <a class="btn-chip demo" href="project.html?slug=advanced-todo-list-app">details ↗</a>
+                    <a class="btn-chip code" href="https://github.com/kanizadev/p012" target="_blank" rel="noopener noreferrer">view code ↗</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>News App</h3>
+                <p>📰 A Flutter news reader that brings headlines and articles into a clean, scroll‑first reading experience.</p>
+                <ul class="project-meta">
+                    <li><strong>Tech</strong>: Flutter, Dart, REST APIs</li>
+                    <li><strong>Highlights</strong>: Latest headlines, article details, loading and error states</li>
+                    <li><strong>Focus</strong>: Consuming APIs and structuring content for readability</li>
+                </ul>
+                <div class="project-actions">
+                    <a class="btn-chip demo" href="project.html?slug=news-app">details ↗</a>
+                    <a class="btn-chip code" href="https://github.com/kanizadev/p013" target="_blank" rel="noopener noreferrer">view code ↗</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Advanced Color Palette Generator</h3>
+                <p>🌈 A Flutter color‑palette generator with multiple color‑scheme types and a soft glassmorphism aesthetic.</p>
+                <ul class="project-meta">
+                    <li><strong>Tech</strong>: Flutter, Dart</li>
+                    <li><strong>Highlights</strong>: Multiple palette modes, randomization, copyable color values</li>
+                    <li><strong>Focus</strong>: Design tooling UI and color handling</li>
+                </ul>
+                <div class="project-actions">
+                    <a class="btn-chip demo" href="project.html?slug=advanced-color-palette-generator">details ↗</a>
+                    <a class="btn-chip code" href="https://github.com/kanizadev/p014" target="_blank" rel="noopener noreferrer">view code ↗</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Pixel Art Studio</h3>
+                <p>🎨 A Flutter pixel‑art editor with a nostalgic 8‑bit feel and simple drawing tools.</p>
+                <ul class="project-meta">
+                    <li><strong>Tech</strong>: Flutter, Dart</li>
+                    <li><strong>Highlights</strong>: Tap‑to‑draw grid, color picker, clear canvas actions</li>
+                    <li><strong>Focus</strong>: Custom drawing surfaces and interaction design</li>
+                </ul>
+                <div class="project-actions">
+                    <a class="btn-chip demo" href="project.html?slug=pixel-art-studio">details ↗</a>
+                    <a class="btn-chip code" href="https://github.com/kanizadev/p015" target="_blank" rel="noopener noreferrer">view code ↗</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Fortune Wheel</h3>
+                <p>🎡 A minimal‑yet‑cute Flutter fortune wheel with a sage green theme and glassmorphism accents.</p>
+                <ul class="project-meta">
+                    <li><strong>Tech</strong>: Flutter, Dart</li>
+                    <li><strong>Highlights</strong>: Spin animations, random selection, configurable wheel segments</li>
+                    <li><strong>Focus</strong>: Animation curves and playful micro‑interactions</li>
+                </ul>
+                <div class="project-actions">
+                    <a class="btn-chip demo" href="project.html?slug=fortune-wheel">details ↗</a>
+                    <a class="btn-chip code" href="https://github.com/kanizadev/p016" target="_blank" rel="noopener noreferrer">view code ↗</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Sudoku Master</h3>
+                <p>🧩 A Flutter Sudoku app that keeps the board clean and readable while the puzzles get harder.</p>
+                <ul class="project-meta">
+                    <li><strong>Tech</strong>: Flutter, Dart</li>
+                    <li><strong>Highlights</strong>: Grid‑based board, number input, feedback for moves</li>
+                    <li><strong>Focus</strong>: Game layout and rule‑driven UX</li>
+                </ul>
+                <div class="project-actions">
+                    <a class="btn-chip demo" href="project.html?slug=sudoku-master">details ↗</a>
+                    <a class="btn-chip code" href="https://github.com/kanizadev/p017" target="_blank" rel="noopener noreferrer">view code ↗</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Kids Crossword Fun!</h3>
+                <p>🧩 A Flutter crossword app for kids with simple words, big tiles, and friendly visuals.</p>
+                <ul class="project-meta">
+                    <li><strong>Tech</strong>: Flutter, Dart</li>
+                    <li><strong>Highlights</strong>: Child‑friendly grid, easy clues, playful color palette</li>
+                    <li><strong>Focus</strong>: Designing for younger users and accessibility</li>
+                </ul>
+                <div class="project-actions">
+                    <a class="btn-chip demo" href="project.html?slug=kids-crossword-fun">details ↗</a>
+                    <a class="btn-chip code" href="https://github.com/kanizadev/p018" target="_blank" rel="noopener noreferrer">view code ↗</a>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3>kanizadev</h3>
+                <p>App and website developer crafting calm digital journeys.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick links</h4>
+                <a href="index.html">home</a>
+                <a href="about.html">about</a>
+                <a href="projects.html">projects</a>
+                <a href="contact.html">contact</a>
+            </div>
+
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a class="social-icon" href="https://github.com/kanizadev" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                    <a class="social-icon" href="https://instagram.com/kanizadev" target="_blank"
+                        rel="noopener noreferrer" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                    <a class="social-icon" href="https://twitter.com/kanizadev" target="_blank" rel="noopener noreferrer"
+                        aria-label="X (Twitter)">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a class="social-icon" href="https://discord.com/users/948224120716402708" target="_blank"
+                        rel="noopener noreferrer" aria-label="Discord">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year">2025</span> kanizadev &mdash; built with HTML, CSS &amp; JS</p>
+            <a class="back-to-top" href="#">back to top ↑</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+

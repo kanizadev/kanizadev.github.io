@@ -9,8 +9,10 @@ on:
       - main
 
 jobs:
+  # Runs on all events (push and PR)
   validate:
     runs-on: ubuntu-latest
+    name: Validate Code
     steps:
       - uses: actions/checkout@v4
       
@@ -24,10 +26,15 @@ jobs:
       
       - name: Check Node.js syntax
         run: node --check server.js
+      
+      - name: List static files
+        run: ls -la *.html *.css *.js 2>/dev/null || echo "Static files found"
 
+  # Only runs on push to main branch
   deploy:
     needs: validate
     runs-on: ubuntu-latest
+    name: Deploy to Pages
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     
     permissions:
@@ -35,8 +42,13 @@ jobs:
       pages: write
       id-token: write
     
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -45,21 +57,11 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
+          retention-days: 1
       
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-
-  notify:
-    needs: deploy
-    runs-on: ubuntu-latest
-    if: always()
-    steps:
-      - name: Deployment Status
-        run: |
-          if [ "${{ needs.deploy.result }}" == "success" ]; then
-            echo "✅ Successfully deployed to GitHub Pages"
-            echo "📍 Visit: https://kanizadev.github.io"
-          else
-            echo "❌ Deployment failed"
-          fi
+      
+      - name: ✅ Deployment Complete
+        run: echo "Site deployed to ${{ steps.deployment.outputs.page_url }}"

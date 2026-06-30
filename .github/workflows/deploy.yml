@@ -81,9 +81,7 @@ jobs:
       
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
-      
-      - name: ✅ Deployment Complete
+      uses: actions/deploy-pages@v4
         run: echo "🎉 Site deployed to ${{ steps.deployment.outputs.page_url }}"
       
       - name: ❌ Deployment Failed

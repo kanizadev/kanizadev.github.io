@@ -27,8 +27,16 @@ jobs:
       - name: Check Node.js syntax
         run: node --check server.js
       
-      - name: List static files
-        run: ls -la *.html *.css *.js 2>/dev/null || echo "Static files found"
+      - name: Verify static files
+        run: |
+          echo "Checking static files..."
+          for file in index.html contact.html about.html projects.html style.css script.js; do
+            if [ -f "$file" ]; then
+              echo "✓ $file"
+            else
+              echo "✗ Missing: $file"
+            fi
+          done
 
   # Only runs on push to main branch
   deploy:
@@ -50,13 +58,25 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       
+      - name: Create deploy directory
+        run: |
+          mkdir -p _deploy
+          cp *.html _deploy/ 2>/dev/null || true
+          cp *.css _deploy/ 2>/dev/null || true
+          cp *.js _deploy/ 2>/dev/null || true
+          cp *.jpg _deploy/ 2>/dev/null || true
+          cp *.png _deploy/ 2>/dev/null || true
+          cp *.pdf _deploy/ 2>/dev/null || true
+          cp CNAME _deploy/ 2>/dev/null || true
+          ls -la _deploy/
+      
       - name: Setup Pages
         uses: actions/configure-pages@v4
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: '_deploy'
           retention-days: 1
       
       - name: Deploy to GitHub Pages
@@ -64,4 +84,10 @@ jobs:
         uses: actions/deploy-pages@v2
       
       - name: ✅ Deployment Complete
-        run: echo "Site deployed to ${{ steps.deployment.outputs.page_url }}"
+        run: echo "🎉 Site deployed to ${{ steps.deployment.outputs.page_url }}"
+      
+      - name: ❌ Deployment Failed
+        if: failure()
+        run: |
+          echo "Deployment failed. Check logs above for details."
+          exit 1

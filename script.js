@@ -145,14 +145,12 @@ if (typeof emailjs !== "undefined") {
                     const responseEl = document.getElementById("formResponse");
                     if (responseEl) {
                         responseEl.innerText = "Message sent!";
-                        responseEl.style.color = "#4ade80";
                     }
                     this.reset();
                 }, (err) => {
                     const responseEl = document.getElementById("formResponse");
                     if (responseEl) {
-                        responseEl.innerText = "Failed to send message. Please try again.";
-                        responseEl.style.color = "#ef4444";
+                        responseEl.innerText = "Error sending.";
                     }
                     console.error("EmailJS error:", err);
                 });
